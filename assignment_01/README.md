@@ -344,7 +344,6 @@ Blocked GEMM provides improved cache performance for larger matrices, resulting 
 
 1. Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein, *Introduction to Algorithms*, 4th Edition, MIT Press.
 2. Robert Sedgewick and Kevin Wayne, *Algorithms*, 4th Edition, Addison-Wesley.
-3. C++ Reference – Standard Template Library (STL) documentation for `queue`, `priority_queue`, `vector`, and `chrono`.
+3. C++ Standard Template Library (STL) documentation for `queue`, `priority_queue`, `vector`, and `chrono`.
 
-
---_
+---
