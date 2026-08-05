@@ -1,5 +1,6 @@
 #include "../headers/graph_generator.h"
-#include "../headers/bfs_dfs.h"
+#include "../headers/bfs.h"
+#include "../headers/dfs.h"
 #include "../headers/sssp.h"
 #include <iostream>
 
@@ -11,8 +12,9 @@ int main(){
     do{
         cout << "Assignment 1 (Buddy):\n";
         cout << "1. Generate Graph Test Files\n";
-        cout << "2. Run BFS and DFS Algorithms\n";
-        cout << "3. Run SSSP Algorithm\n";
+        cout << "2. Run BFS Traversal\n";
+        cout << "3. Run DFS Traversal\n";
+        cout << "4. Run SSSP Traversal (Dijkstra's Algorithm)\n";
         cout << "0. Exit\n";
 
         cout << "Enter choice: ";
@@ -25,10 +27,14 @@ int main(){
                 break;
 
             case 2:
-                run_BFS_DFS();
+                run_BFS_test();
                 break;
 
             case 3:
+                run_DFS_test();
+                break;
+
+            case 4:
                 run_SSSP_test();
                 break;
 
