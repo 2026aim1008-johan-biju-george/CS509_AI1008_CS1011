@@ -44,15 +44,15 @@ void run_SSSP(CSRGraph& graph, int V, int source) {
     auto end_time = chrono::high_resolution_clock::now(); // End timer for SSSP
     
     auto duration = chrono::duration<double, milli>(end_time - start_time).count();
-    // cout << "Algorithm: SSSP\nSource: " << source << "\nVertex Distance\n";
-    // for(int i=0;i<V;i++){
-    //     if(distance[i]==INT_MAX){ 
-    //         cout << i << "      " << "INF\n";
-    //     }
-    //     else{
-    //         cout << i << "      " << distance[i] << "\n";
-    //     }
-    // }
+    cout << "Algorithm: SSSP\nSource: " << source << "\nVertex Distance\n";
+    for(int i=0;i<V;i++){
+        if(distance[i]==INT_MAX){ 
+            cout << i << "      " << "INF\n";
+        }
+        else{
+            cout << i << "      " << distance[i] << "\n";
+        }
+    }
     cout << "Execution time: " << duration << " ms\n\n";
 }
 
