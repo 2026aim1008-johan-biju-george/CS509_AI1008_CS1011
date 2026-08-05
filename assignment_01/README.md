@@ -309,21 +309,21 @@ The following operations are excluded from the measured time:
 
 | Algorithm | Test File         | Vertices (V) | Edges (E) | Input Type                       | Source Vertex | Expected Output            | Actual Output              | Execution Time (ms) | Status |
 | --------- | ----------------- | -----------: | --------: | -------------------------------- | :-----------: | -------------------------- | -------------------------- | ------------------: | :----: |
-| BFS       | `bfs_10.txt`      |           10 |        20 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |            0.001733 |  Pass  |
-| DFS       | `dfs_10.txt`      |           10 |        20 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |            0.002679 |  Pass  |
-| SSSP      | `sssp_10.txt`     |           10 |        20 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              0.0158 |  Pass  |
-| BFS       | `bfs_100.txt`     |          100 |       200 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |            0.014341 |  Pass  |
-| DFS       | `dfs_100.txt`     |          100 |       200 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |            0.022399 |  Pass  |
-| SSSP      | `sssp_100.txt`    |          100 |       200 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              0.0892 |  Pass  |
-| BFS       | `bfs_10000.txt`   |        10000 |     20000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              1.2797 |  Pass  |
-| DFS       | `dfs_10000.txt`   |        10000 |     20000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              1.7803 |  Pass  |
-| SSSP      | `sssp_10000.txt`  |        10000 |     20000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              7.9506 |  Pass  |
-| BFS       | `bfs_50000.txt`   |        50000 |    100000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              2.3628 |  Pass  |
-| DFS       | `dfs_50000.txt`   |        50000 |    100000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              3.2017 |  Pass  |
-| SSSP      | `sssp_50000.txt`  |        50000 |    100000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |             12.3893 |  Pass  |
-| BFS       | `bfs_100000.txt`  |       100000 |    200000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              2.9121 |  Pass  |
-| DFS       | `dfs_100000.txt`  |       100000 |    200000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              4.2190 |  Pass  |
-| SSSP      | `sssp_100000.txt` |       100000 |    200000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |             15.7229 |  Pass  |
+| BFS       | `bfs_10.txt`      |           10 |        20 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |            0.002782 |  Pass  |
+| DFS       | `dfs_10.txt`      |           10 |        20 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |            0.004451 |  Pass  |
+| SSSP      | `sssp_10.txt`     |           10 |        20 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              0.0151 |  Pass  |
+| BFS       | `bfs_100.txt`     |          100 |       200 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |            0.043229 |  Pass  |
+| DFS       | `dfs_100.txt`     |          100 |       200 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |            0.037512 |  Pass  |
+| SSSP      | `sssp_100.txt`    |          100 |       200 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              0.0805 |  Pass  |
+| BFS       | `bfs_10000.txt`   |        10000 |     20000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              2.7712 |  Pass  |
+| DFS       | `dfs_10000.txt`   |        10000 |     20000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              3.0361 |  Pass  |
+| SSSP      | `sssp_10000.txt`  |        10000 |     20000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |              13.65 |  Pass  |
+| BFS       | `bfs_50000.txt`   |        50000 |    100000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              5.027 |  Pass  |
+| DFS       | `dfs_50000.txt`   |        50000 |    100000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              5.9364 |  Pass  |
+| SSSP      | `sssp_50000.txt`  |        50000 |    100000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |             23.5045 |  Pass  |
+| BFS       | `bfs_100000.txt`  |       100000 |    200000 | Unweighted Adjacency List        |       0       | Valid BFS Traversal        | Valid BFS Traversal        |              5.3222 |  Pass  |
+| DFS       | `dfs_100000.txt`  |       100000 |    200000 | Unweighted Adjacency List        |       0       | Valid DFS Traversal        | Valid DFS Traversal        |              8.092 |  Pass  |
+| SSSP      | `sssp_100000.txt` |       100000 |    200000 | Positive Weighted Adjacency List |       0       | Correct Shortest Distances | Correct Shortest Distances |             30.2236 |  Pass  |
 
 ---
 
