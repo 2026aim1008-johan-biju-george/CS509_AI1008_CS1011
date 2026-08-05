@@ -53,10 +53,10 @@ void run_DFS(CSRGraph& graph, int V, int source) {
         total_time += chrono::duration<double, milli>(end_time - start_time).count();
     }
 
-    // cout << "Algorithm: DFS\nSource: " << source << "\nTraversal: ";
-    // for(int node : traversal){
-    //     cout << node << " ";
-    // }
+    cout << "Algorithm: DFS\nSource: " << source << "\nTraversal: ";
+    for(int node : traversal){
+        cout << node << " ";
+    }
     cout << "\nExecution time: " << total_time/runs << " ms\n\n";
 }
 

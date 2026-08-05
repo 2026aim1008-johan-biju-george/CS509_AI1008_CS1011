@@ -50,19 +50,19 @@ void run_BFS(CSRGraph& graph, int V, int source) {
         total_time += chrono::duration<double, milli>(end_time - start_time).count();
     }
     
-    // cout << "Algorithm: BFS\nSource: " << source << "\nTraversal: ";
-    // for (int node : traversal){
-    //     cout << node << " ";
-    // }
-    // cout << "\nDistances:\n";
-    // for (int i=0;i<V;i++){
-    //     if(distance[i]==INT_MAX){ 
-    //         cout << i << " INF\n";
-    //     }
-    //     else{
-    //         cout << i << " " << distance[i] << "\n";
-    //     }
-    // }
+    cout << "Algorithm: BFS\nSource: " << source << "\nTraversal: ";
+    for (int node : traversal){
+        cout << node << " ";
+    }
+    cout << "\nDistances:\n";
+    for (int i=0;i<V;i++){
+        if(distance[i]==INT_MAX){ 
+            cout << i << " INF\n";
+        }
+        else{
+            cout << i << " " << distance[i] << "\n";
+        }
+    }
     cout << "Execution time: " << total_time/runs << " ms\n\n";
 }
 
