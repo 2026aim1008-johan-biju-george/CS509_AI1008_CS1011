@@ -168,28 +168,36 @@ Where:
 
 | File                           | Description                                                                                                                                     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bfs_dfs.cpp`                  | Implements both the BFS and DFS traversals for unweighted graphs, measures execution time, and then verifies the results.                       |
-| `sssp.cpp`                     | Implements the SSSP traversal using Dijkstra's Algorithm, measures execution time, and then verifies the results.                               |
+| `bfs.cpp`                      | Implements the BFS traversal for unweighted graphs, and measures execution time.                       |
+| `dfs.cpp`                      | Implements the DFS traversal for unweighted graphs, and measures execution time.                       |
+| `sssp.cpp`                     | Implements the SSSP traversal for weighted graphs using Dijkstra's Algorithm, and measures execution time.            |
 | `generate_unweighted_graph.cpp`| Generates unweighted graph test cases with varying numbers of vertices and edges.                                                               |
 | `generate_weighted_graph.cpp`  | Generates weighted graph test cases with varying numbers of vertices and edges.                                                                 |
+| `csr_graph_creation.cpp`    | Reads graph input files and converts the graph from an adjacency list format to the Compressed Sparse Row (CSR) representation.                      |
 
 ### Header Files (stored in `headers/`)
 
 | File                      | Description                                                                               |
 | ------------------------- | ----------------------------------------------------------------------------------------- |
-| `bfs_dfs.h`               | Function declarations for BFS and DFS traversals.                                         |
+| `bfs.h`                   | Function declarations for BFS traversal.                                                  |
+| `dfs.h`                   | Function declarations for DFS traversal.                                                  |
 | `sssp.h`                  | Function declarations for SSSP traversal.                                                 |
 | `graph_generator.h`       | Function declarations for weighted and unweighted graph generation.                       |
+| `csr_graph_creation.h`    | Function declarations for reading graph inputs and conversion to CSR format.              |
 
 ### Helper Functions
 
-| Function                      | Description                                                                                    |
-| ----------------------------- | ---------------------------------------------------------------------------------------------- |
-| `read_graph()`                | Reads graph from test input file and populate adjacency list.             |
-| `run_BFS_DFS()`               | Reads graph test cases, executes both BFS and DFS implementations, and reports execution time. |
-| `run_SSSP_test()`             | Reads graph test cases, executes SSSP implementation, and reports execution time.              |
-| `generate_unweighted_tests()` | Generates random unweighted graph test cases.                                                  |
-| `generate_weighted_tests()`   | Generates random weighted graph test cases.                                                    |
+| Function                            | Description                                                                                    |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `convert_unweighted_graph_to_CSR()` | Converts unweighted graph from adjacency list into CSR format.                                 |
+| `convert_weighted_graph_to_CSR()`   | Converts weighted graph from adjacency list into CSR format.                                   |
+| `read_unweighted_graph()`           | Reads unweighted graph inputs and populates adjacency list.                                    |
+| `read_weighted_graph()`             | Reads weighted graph inputs and populates adjacency list.                                      |
+| `run_BFS_test()`                    | Executes BFS implementation and reports execution time.                                        |
+| `run_DFS_test()`                    | Executes DFS implementation and reports execution time.                                        |
+| `run_SSSP_test()`                   | Executes SSSP implementation and reports execution time.                                       |
+| `generate_unweighted_tests()`       | Generates random unweighted graph test cases.                                                  |
+| `generate_weighted_tests()`         | Generates random weighted graph test cases.                                                    |
 
 ### Test Files (stored in `tests/`)
 
@@ -248,7 +256,7 @@ assignment1.exe
 
 1. Compile the project.
 2. Run the executable.
-3. Generate the required graph test files (if they do not already exist).
+3. Generate the required graph test files.
 4. Select the desired algorithm (BFS, DFS, or SSSP).
 5. Enter the required input file or choose the appropriate test case.
 6. The program converts the adjacency-list input into CSR format.
