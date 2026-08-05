@@ -98,6 +98,38 @@ Where:
 * **degree** – Number of adjacent vertices.
 * **SOURCE s** – Source vertex from which the traversal begins.
 
+Example test case 1 (BFS):
+```
+10 20
+0 4 5 1 2 6 
+1 5 2 0 9 3 4 
+2 3 5 8 0 
+3 3 6 1 8 
+4 3 2 9 1 
+5 1 9 
+6 2 8 0 
+7 1 1 
+8 4 7 9 2 3 
+9 4 0 1 8 4 
+SOURCE 0
+```
+
+Example test case 1 (DFS):
+```
+10 20
+0 2 1 4 
+1 4 3 5 7 8 
+2 2 6 4 
+3 1 7 
+4 5 5 0 2 8 6 
+5 3 2 9 1 
+6 2 3 4 
+7 3 3 8 1 
+8 5 2 7 4 9 1 
+9 3 2 5 8 
+SOURCE 0
+```
+
 ---
 
 #### SSSP Input Format
@@ -120,6 +152,22 @@ Where:
 * **neighbor** – Adjacent vertex.
 * **weight** – Positive edge weight.
 * **SOURCE s** – Source vertex for computing shortest paths.
+
+Example (Test case 1):
+```
+10 20
+0 3 7 8 6 10 9 3 
+1 1 8 1 
+2 3 9 10 7 4 6 6 
+3 3 5 5 9 6 7 3 
+4 4 3 2 8 2 6 9 7 2 
+5 2 4 9 9 1 
+6 4 5 8 0 10 4 9 2 6 
+7 4 6 7 3 3 4 2 2 4 
+8 2 9 6 4 2 
+9 4 1 4 5 1 0 3 3 6 
+SOURCE 0
+```
 
 ---
 
@@ -261,7 +309,7 @@ assignment1.exe
 5. Enter the required input file or choose the appropriate test case.
 6. The program converts the adjacency-list input into CSR format.
 7. The selected algorithm is executed.
-8. The traversal (BFS/DFS) or shortest-path distances (SSSP) and the algorithm execution time are displayed.
+8. The traversal (BFS/DFS) or shortest-path distances (SSSP) and the algorithm execution times are displayed.
 
 ---
 
@@ -289,6 +337,25 @@ The following operations are excluded from the measured time:
 - **Actual Output:**
   - The program produced a valid BFS traversal and correctly computed distances for all reachable vertices. Unreachable vertices, if any, were reported as `INF`.
 
+Example (Test case 1):
+```
+Algorithm: BFS
+Source: 0
+Traversal: 0 5 1 2 6 9 3 4 8 7 
+Distances:
+0 0
+1 1
+2 1
+3 2
+4 2
+5 1
+6 1
+7 3
+8 2
+9 2
+Execution time: 0.002782 ms
+```
+
 ### DFS
 - **Expected Output:**
   - A valid DFS traversal starting from the specified source vertex.
@@ -296,12 +363,38 @@ The following operations are excluded from the measured time:
 - **Actual Output:**
   - The program produced a valid DFS traversal, visiting every reachable vertex exactly once.
 
+Example (Test case 1):
+```
+Algorithm: DFS
+Source: 0
+Traversal: 0 1 3 5 2 6 9 7 8 4 
+Execution time: 0.004451 ms
+```
+
 ### SSSP
 - **Expected Output:**
   - The shortest path distance from the source vertex to every other reachable vertex in the weighted graph.
   - Unreachable vertices should be reported as `INF`.
 - **Actual Output:**
   - The program correctly computed the shortest path distances using Dijkstra's algorithm. Unreachable vertices, if any, were reported as `INF`.
+
+Example (Test case 1):
+```
+Algorithm: SSSP
+Source: 0
+Vertex Distance
+0      0
+1      7
+2      12
+3      9
+4      10
+5      4
+6      10
+7      8
+8      8
+9      3
+Execution time: 0.0151 ms
+```
 
 ---
 
