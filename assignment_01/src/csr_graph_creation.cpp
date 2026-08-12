@@ -1,3 +1,4 @@
+#include "../headers/csr_graph_creation.h"
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -7,13 +8,6 @@
 #include <climits>
 
 using namespace std;
-
-// structure to represent graph in Compressed Sparse Row (CSR) format
-struct CSRGraph {
-    vector<int> values; // weights of edges
-    vector<int> col_idx; // column indices of edges
-    vector<int> row_ptr; // row pointers for each vertex
-};
 
 // function to read unweighted graph from file into adjacency list
 bool read_unweighted_graph(string& filename, vector<vector<int>>& adj, int& V, int& E, int& source){
