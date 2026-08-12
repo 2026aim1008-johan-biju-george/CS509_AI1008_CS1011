@@ -13,8 +13,28 @@ string toString(T val) {
     return ss.str();
 }
 
-// Generates valid Triangle Counting format
+// Generates valid Triangle Counting format (unweighted undirected adjacency list)
 void generateTCInput(int V, const string& filename) {
+    ofstream outfile(filename.c_str());
+    if (!outfile.is_open()) {
+        cerr << "Error creating file: " << filename << endl;
+        return;
+    }
+
+    int E = (V * 3) / 2;
+    outfile << V << " " << E << "\n";
+
+    for (int i = 0; i < V; ++i) {
+        int n1 = (i + 1) % V;
+        int n2 = (i + 2) % V;
+        int n3 = (i + 3) % V;
+        outfile << i << " 3 " << n1 << " " << n2 << " " << n3 << "\n";
+    }
+    outfile.close();
+}
+
+// Generates valid Betweenness Centrality format (unweighted undirected adjacency list)
+void generateBCInput(int V, const string& filename) {
     ofstream outfile(filename.c_str());
     if (!outfile.is_open()) {
         cerr << "Error creating file: " << filename << endl;
@@ -72,6 +92,7 @@ int main() {
         int v = sizes[i];
         generateTCInput(v, "tests/tc_" + toString(v) + ".txt");
         generateCCInput(v, "tests/cc_" + toString(v) + ".txt");
+        generateBCInput(v, "tests/bc_" + toString(v) + ".txt");
     }
     cout << "All test files successfully generated\n";
 }
