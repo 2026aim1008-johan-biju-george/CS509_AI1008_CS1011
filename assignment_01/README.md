@@ -19,7 +19,7 @@ The assignment measures the execution time of these implementations for graphs o
 
 ### 1. Breadth-First Search (BFS)
 
-Breadth-First Search (BFS) is a graph traversal algorithm that explores vertices level by level, starting from a specified source vertex. It uses a queue to ensure that all neighbours of the current vertex are visited before moving to the next level.
+BFS is a graph traversal algorithm that explores vertices level by level, starting from a specified source vertex. It uses a queue to ensure that all neighbours of the current vertex are visited before moving to the next level.
 
 In this implementation:
 
@@ -33,7 +33,7 @@ In this implementation:
 
 ### 2. Depth-First Search (DFS)
 
-Depth-First Search (DFS) explores a graph by visiting one path as deeply as possible before backtracking. This implementation uses a recursive approach to traverse the graph.
+DFS explores a graph by visiting one path as deeply as possible before backtracking. This implementation uses a recursive approach to traverse the graph.
 
 In this implementation:
 
@@ -47,7 +47,7 @@ In this implementation:
 
 ### 3. Single-Source Shortest Path (SSSP)
 
-The Single-Source Shortest Path (SSSP) problem is solved using Dijkstra's algorithm, which computes the minimum distance from a given source vertex to every other vertex in a graph with positive edge weights.
+The SSSP problem is solved using Dijkstra's algorithm, which computes the minimum distance from a given source vertex to every other vertex in a graph with positive edge weights.
 
 In this implementation:
 
@@ -59,7 +59,7 @@ In this implementation:
 
 ---
 
-### CSR Representation
+## Graph Representation Used
 
 All graph algorithms operate on the Compressed Sparse Row (CSR) representation of the graph.
 
@@ -182,8 +182,6 @@ SOURCE 0
 * Input files are assumed to follow the specified format without errors.
 * The source vertex specified in the input file is valid.
 
----
-
 ### Constraints
 
 * Graph sizes tested:
@@ -203,6 +201,7 @@ SOURCE 0
   * CSR conversion
   * Output printing
 
+---
 
 ## Description of Source Files, Driver Files, Helper Functions, and Test Files
 
@@ -281,8 +280,6 @@ Compile all source files together using the following command:
 g++ driver/driver.cpp src/*.cpp -o assignment1.exe
 ```
 
----
-
 ### Execution
 
 Run the generated executable.
@@ -310,8 +307,6 @@ assignment1.exe
 6. The program converts the adjacency-list input into CSR format.
 7. The selected algorithm is executed.
 8. The traversal (BFS/DFS) or shortest-path distances (SSSP) and the algorithm execution times are displayed.
-
----
 
 ### Performance Measurement
 
