@@ -3,7 +3,8 @@
 
 #include <string>
 
+using namespace std;
 
-void runKMeansTask(const std::string& filepath);
+void run_k_means_test(string& filepath);
 
 #endif
